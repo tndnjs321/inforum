@@ -1,0 +1,244 @@
+@charset "UTF-8";
+
+@import url(style_Reset.css);
+
+@import url(//fonts.googleapis.com/earlyaccess/notosanskr.css);
+
+.notosanskr {
+	font-family: 'Noto Sans KR', sans-serif;
+}
+
+* {
+	margin: 0 auto;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+div#wrap {
+	margin-top: 100px;
+}
+
+h3 {
+	font-weight: bold;
+	font-size: 40px;
+}
+
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+section.notice {
+	padding: 80px 0;
+}
+
+.page-title {
+	margin-bottom: 60px;
+	text-align: center;
+}
+
+div#button {
+	width: 50%;
+	text-align: right;
+	transform: translateY(50px);
+}
+
+#board-search .search-window {
+	background-color: #f9f7f9;
+	height: 50px;
+	width: 100%;
+	text-align: right;
+	position: relative;
+}
+
+#board-search .search-window .search-wrap input {
+	height: 40px;
+	width: 100%;
+	font-size: 14px;
+	padding: 7px 14px;
+	border: 1px solid #ccc;
+}
+
+#board-search .search-window .search-wrap input:focus {
+	border-color: #333;
+	outline: 0;
+	border-width: 1px;
+}
+
+.board-table {
+	font-size: 17px;
+	width: 100%;
+	border-top: 1px solid #ccc;
+	border-bottom: 1px solid #ccc;
+}
+
+.board-table a {
+	color: #333;
+	display: inline-block;
+	line-height: 1.4;
+	word-break: break-all;
+	vertical-align: middle;
+}
+
+.board-table a:hover {
+	text-decoration: underline;
+}
+
+.board-table th, .board-table td {
+	padding: 14px 0;
+}
+
+.board-table tbody td, .board-table tbody th {
+	border-top: 1px solid #e7e7e7;
+}
+
+.th-num {
+	text-align: center;
+	width: 10%;
+}
+
+.th-title {
+	text-align: left;
+	width: 70%;
+}
+
+.th-date {
+	text-align: center;
+	width: 20%;
+}
+
+.btn {
+	display: inline-block;
+	padding: 10px 20px;
+	font-size: 16px;
+	border-radius: 5px;
+	border: none;
+	cursor: pointer;
+	transition: background-color 0.3s;
+}
+
+.btn-dark {
+	background-color: #555;
+	color: #fff;
+}
+
+.btn-dark:hover, .btn-dark:focus {
+	background-color: #373737;
+	border-color: #373737;
+	color: #fff;
+}
+
+/* 추가 스타일 */
+.container {
+	width: 1100px;
+	margin: 0 auto;
+}
+
+.clearfix:after {
+	content: '';
+	display: block;
+	clear: both;
+}
+
+.blind {
+	position: absolute;
+	overflow: hidden;
+	clip: rect(0, 0, 0, 0);
+	margin: -1px;
+	width: 1px;
+	height: 1px;
+}
+
+/* noticeWrite 시작 */
+/* 새로운 스타일 추가 */
+#wrap2 {
+	margin-top: 200px;
+}
+
+.bbsWrite {
+	width: 60%; /* 폼의 너비를 조절 */
+	margin: 10px auto; /* 수직 중앙 정렬 */
+	padding: 30px;
+	border: 1px solid #ccc;
+	border-radius: 8px;
+	background-color: #f9f9f9;
+	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+	font-size: 32px;
+	margin-bottom: 20px;
+	color: #333;
+	text-align: center;
+}
+
+table {
+	width: 100%;
+	margin-top: 30px;
+}
+
+table td, table th {
+	padding: 12px 20px;
+	border-bottom: 1px solid #ddd;
+}
+
+.req {
+	font-weight: bold;
+	color: #555;
+}
+
+input[type="text"], textarea {
+	width: 100%;
+	padding: 10px;
+	border: 1px solid #ccc;
+	border-radius: 4px;
+}
+
+button {
+	padding: 10px 20px;
+	border: none;
+	border-radius: 4px;
+	background-color: #555;
+	color: #fff;
+	cursor: pointer;
+	transition: background-color 0.3s;
+}
+
+button:hover {
+	background-color: #373737;
+}
+
+td.button {
+	text-align: center;
+}
+
+/* 기존 스타일에 적용되지 않는 스타일은 여기에 추가하면 됩니다. */
+
+/* noticeDetail */
+div#wrap3 {
+	margin-top: 200px;
+	width: 50%;
+}
+
+div#title3 {
+	width: 100%; text-align : left;
+	height: 40px;
+	font-size: 30px;
+	text-align: left;
+}
+
+#content3 {
+	width: 100%;
+	border-top: 1px solid #aaa;
+	border-bottom: 1px solid #aaa;
+	padding: 20px;
+	 white-space: pre-line;
+	 font-size: 18px;
+}
+
+
+#button3 {
+	width: 100%;
+	text-align: right;
+	margin-top: 10px;
+}

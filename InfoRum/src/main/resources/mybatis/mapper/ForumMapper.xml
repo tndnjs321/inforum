@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+  
+	<mapper namespace="com.ezen.infoRum.dao.ForumDao">
+		<!-- 게시판 초기화면 리스트-->
+		<select id="mtdListView" resultType="com.ezen.infoRum.dto.ForumDto">
+			select * from mainBoard where category='${categori}' order by num desc limit 0,5
+		</select>
+		
+		<!-- 스크롤이벤트시 리스트 추가게시글-->
+		<select id="mtdListViewPlus" resultType="com.ezen.infoRum.dto.ForumDto">
+			select * from mainBoard where category='${param3}' order by num desc limit ${param1},${param2}
+		</select>
+		
+		<!-- 게시판 게시글 게시 처리 -->
+		<insert id="mtdWriterPost">
+			insert into mainBoard (uid, nickname, category, image, content, profile)
+			values (#{item1}, #{item2}, #{item3}, #{item4}, #{item5}, #{item6})
+		</insert>
+		
+		<!-- 게시물 수정 처리 -->
+		<update id="mtdUpdatePost">
+			update mainBoard set  
+			uid=#{item2}, nickname=#{item3}, category=#{item4}, 
+			image=#{item5}, content=#{item6}, profile=#{item7}
+			
+			where num=#{item1} 
+		</update>
+		
+		<!-- 게시물 삭제 처리 -->
+	  	<delete id="mtdDeletePost">
+	  		delete from mainBoard where num = ${param1}
+	  	</delete>
+	  	
+	  	<!-- 유저 타임라인 초기화면 리스트-->
+		<select id="mtdUserTimelineList" resultType="com.ezen.infoRum.dto.ForumDto">
+			select * from mainBoard where uid='${param1}' order by num desc limit 0,5
+		</select>
+		
+		<!-- 유저 타임라인 스크롤이벤트시 리스트 추가게시글-->
+		<select id="mtdUserTimelineListPlus" resultType="com.ezen.infoRum.dto.ForumDto">
+			select * from mainBoard where uid='${param3}' order by num desc limit ${param1},${param2}
+		</select>
+		
+		<select id="mtdPostCnt" resultType="int">
+			select count(*) from mainBoard where uid='${param1}'
+		</select>
+	</mapper>

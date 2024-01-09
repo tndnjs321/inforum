@@ -1,0 +1,389 @@
+@charset "UTF-8";
+
+@import url(//fonts.googleapis.com/earlyaccess/notosanskr.css);
+
+.notosanskr {
+	font-family: 'Noto Sans KR', sans-serif;
+}
+
+* {
+	margin: 0 auto;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+div#wrap {
+	margin-top: 100px;
+	width: 1000px;
+	padding: 30px;
+	text-align: center;
+}
+
+div#header {
+	border: 1px solid #000;
+	width: 80%;
+	font-size: 50px;
+	font-weight: bold;
+	padding: 20px;
+}
+
+div#main {
+	text-align: center;
+	margin: 0px 0 30px 0;
+	width: 100%;
+	border-top: 3px solid #000;
+	padding: 10px;
+}
+
+#inquiryTbl {
+    border-collapse: collapse;
+    width: 100%;
+}
+thead {
+    background: rgb(158 227 255);
+    height:40px;
+}
+#theadTr {
+    padding:20px;
+}
+.theadNum {
+	text-align: left;
+}
+.num {
+	width:7%;
+}
+.title {
+	width:63%;
+}
+.name {
+	width:16%;
+}
+.regTm {
+	width:14%;
+	height: 40px;
+    line-height: 1.4;
+}
+.tbdyTitle {
+    text-align: left;
+}
+.tbdyTr {
+	border-bottom:1px solid black;
+	cursor:pointer;
+}
+div#page {
+    text-align: left;
+}
+
+        div#header {
+            border: 1px solid #000;
+            width: 80%;
+            font-size: 50px;
+            font-weight: bold;
+            padding: 20px;
+        }
+        #board {
+            margin-left: 0px;
+            margin-top: 20px;
+            text-align: left;
+            border: 1px solid rgb(0,0,0,0.4);
+            border-radius: 10px;
+            padding: 30px;
+            overflow: visible;
+    		white-space: nowrap;
+        }
+        
+        #query {
+            width: 90%;
+            border-bottom: 1px solid black;
+            margin-left: 0px;
+            padding-bottom: 10px;   
+            display: inline-block;
+        }
+        #writeButton {
+            margin-top: -10px;
+            margin-left: 22px;
+            display: inline-block;
+            position: relative;
+            vertical-align: top;
+            padding: 10px;
+            background-color: white;
+            border-radius: 5px;
+        }
+        #title {
+            background-color: #f5f6f8;
+            border-radius: 10px;
+            padding: 20px;
+            padding-top: 10px;
+            margin-top: 10px;
+            padding-bottom: 10px;
+        }
+        #titleText {
+            background-color: #f5f6f8;
+            border: 0px;
+            font-size: 16px;
+            width: 100%;
+            height: 20px;
+            resize: none;
+        }
+
+        #titleText:focus {
+            outline: none;
+        }
+        #board2 { 
+            margin-left: 0px;
+            margin-top: 50px;
+            text-align: left;
+            
+        }
+        #imgContainer {
+            display: flex;
+            margin-left: 687px;
+            margin-top: 10px;
+            margin-bottom: 10px;
+        }
+      #a {
+            width: 104px;
+        }
+        .noticeImg {
+            width: 102px;
+            cursor: pointer;
+        }
+        #b {
+            width: 90px;
+        }
+        #c {
+            height: 47px;
+            width: 122px;
+        }
+
+
+        div#headerDetail {
+            border: 1px solid #000;
+            width: 80%;
+            font-size: 50px;
+            font-weight: bold;
+            padding: 20px;
+        }
+        #boardHeader {
+            text-align: left;
+            border-bottom: 1px solid rgb(0,0,0,0.4);
+            width: 95%;
+            white-space: nowrap;
+            padding-bottom: 12px;
+        }
+        #titleDetail {
+            font-size: 25px;
+            margin-top: 25px;
+            margin-left: 25px;
+            text-align: left;
+        }
+        #circle {
+            width: 50px;
+            height: 50px;
+            Border-radius: 50%;
+            object-fit: contain;
+            overflow: hidden;
+            max-width: 50px;
+            display: inline-block;
+            margin-top:20px;
+        }
+        #profile {
+            height: 50px;
+            width: 50px;
+            object-fit: cover;
+        }
+        #container {
+            display: inline-block;
+            margin-top: 25px;
+            vertical-align: top;
+        }
+        #username {
+            text-align: left;
+            margin-left: 10px;
+        }
+        #text {
+            display: flex; 
+            opacity: 0.8;
+        }
+       .text {
+            margin-left: 10px;
+            opacity: 0.8;
+            
+       }
+       #setting {
+        display: inline-block;
+       	margin-left: 437px;
+        overflow: visible;
+        overflow-inline: visible;
+        margin-top: 0px;
+    	vertical-align: top;
+    }
+    #setting0 {
+        height: 40px;
+        width: 40px;
+        display: inline-block;
+        margin-top: 28px;
+    }
+    #setting1 {
+        display: inline-block;
+        margin-top: 46px;
+        vertical-align: top;
+        margin-left: -4px;
+        font-size: 13px;
+    }
+    #setting2 {
+        display: inline-block;
+        margin-top: 46px;
+        vertical-align: top;
+        margin-left: 2px;
+        font-size: 13px;
+    }
+    #setting3 {
+        display: inline-block;
+        margin-top: 37px;
+        vertical-align: top;
+        margin-left: 4px;
+        height: 30px;
+        white-space: nowrap;
+        width: 20px;
+    }
+    #textArea {
+        width: 890px;
+    }
+    #textContent {
+        text-align: left;
+    	min-height: 100px;
+    	margin-left: 20px;
+    	margin-right: 20px;
+    	margin-bottom: 5px;
+    }
+    #comment {
+        height: 42px;
+        margin-left: 10px;
+        margin-bottom: 10px;
+       	margin-top: -37px;
+    }
+    #commentText0 {
+        display: inline-block;
+        vertical-align: top;
+       	margin-top: -19px;
+        font-size: 12px;
+    }
+    #commentText1 {
+        display: inline-block;
+        vertical-align: top;
+       	margin-top: -19px;
+        font-size: 12px;
+    }
+    #boardBottom {
+        width: 95%;
+        border-top: 1px solid rgb(0,0,0,0.4);
+        margin-top: -10px;
+    }
+    #commentNotice {
+        font-size: 21px;
+        font-weight: 410;
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+    #commentArea {
+        border: 1px solid rgb(0,0,0,0.4);
+        margin-bottom: 35px;
+        padding: 10px;
+        
+    }
+    #parentCommentArea {
+        background-color: #f9f9fa;
+        margin-bottom: 10px;
+        padding: 20px;
+        white-space: nowrap;
+        padding-bottom: 0px;
+        padding-top: 15px;
+    }
+    div#circle2 {
+        width: 30px;
+        height: 30px;
+        Border-radius: 50%;
+        object-fit: contain;
+        overflow: hidden;
+        /* max-width: 50px; */
+        display: inline-block;
+    }
+    img#profile2 {
+        height: 30px;
+        width: 30px;
+        object-fit: cover;
+    }
+    #parentCommentNickname {
+        display: inline-block;
+        vertical-align: top;
+        margin-top: 7px;
+        font-size: 13px;
+        margin-left: 10px;
+    }
+    #parentCommentTool {
+        display: inline-block;
+        height: 30px;
+        vertical-align: top;
+        margin-top: -5px;
+        margin-left: 669px;
+    }
+    #parentCommentContent {
+        font-size: 13px;
+        margin-left: 44px;
+        margin-top: -6px;
+    }
+    #parentCommentDate {
+        font-size: 11px;
+        margin-top: 5px;
+        margin-left: 44px;
+        
+    }
+    #parnetCommentImg {
+        margin-top: 10px;
+        height: 100px;
+        margin-left: 40px;
+        margin-bottom: 3px;
+        
+    }
+    #parentCommentEnd {
+    	margin-bottom: 15px;
+    	border: 1px solid #f2f2f2;
+    	width: 758px;
+    	margin-top: 10px;
+    }
+
+    #commentUserName {
+        font-weight: bold;
+        font-size: 17px;
+        padding-bottom: 5px;
+    }
+
+    #commentText {
+        width: 100%;
+        resize: none;
+        min-height: 120px;
+        border:0px;
+    }
+    #commentText:focus {
+        outline: none;
+    }
+    #commentSubmitArea {
+    	display: flex;
+    }
+    #camera {
+        height: 30px;
+        margin-left: 5px;
+    }
+    #submit {
+        display: inline-block;
+        vertical-align: top;
+        margin-top: 13px;
+        margin-left: 703px;
+        font-weight: 200;
+        font-size: 13px;
+        
+    }
+
+
+

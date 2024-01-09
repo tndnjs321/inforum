@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.ezen.infoRum.dao.MemDao">
+
+<!-- 회원가입 -->
+	<insert id="joinProc" parameterType="java.util.Map">
+		insert into userList (uid, upw, nickname, uemail) 
+		values (#{item1},#{item2},#{item3},#{item4})
+	</insert>
+
+<!-- 로그인처리 -->
+	<select id="LoginProc" resultType="int">
+		select count(*) from userList where (uid like (#{param1}) or uemail like (#{param1})) and upw like(#{param2})
+	</select>
+	
+<!-- 회원정보가져오기 -->
+	<select id="findMemInfo" resultType="com.ezen.infoRum.dto.MemDto">
+		select * from userList where uid=#{param1} or uemail=#{param1}
+	</select>
+
+<!-- 비밀번호 변경 -->
+	<update id="pwdChange">
+		update userList set upw=#{param3} where (uid=#{param1} and uemail=#{param2})
+	</update>
+	
+<!-- 	아이디 중복 체크하기 -->
+	<select id="chkID" resultType="int">
+		select count(*) from userList where uid like (#{param1})
+	</select>
+	
+<!-- 	회원정보 수정 -->
+	<update id="myPageProc">
+		update userList set upw=#{item2},nickname=#{item3},uemail=#{item4} where uid=#{item1}
+	</update>
+</mapper>
+
+	
+	
+
+<!-- 삭제하기 -->
+
+<!-- <delete id="del"> -->
+<!-- 	delete from goodsList where -->
+	
+<!-- 		<foreach collection="array" item="item" index="index" -->
+<!-- 		 open="num in (" separator="," close=")"> -->
+<!-- 			#{item} -->
+<!-- 		</foreach> -->
+<!-- </delete> -->
+	
+
+
+
+
+
+
+
+<!-- <mapper namespace="dao 경로와 인터페이스명"> -->
+
+<!-- <select id="dao에서 사용하는 메서드명" resultType="dto"> -->
+<!-- select * from goodsList order by num desc -->
+<!-- </select> -->
+
+<!-- <select id="dao에서 사용하는 메서드명" resultType="dto"> -->
+<!-- select * from goodsList where num= #{param1} -->
+<!-- </select> -->
+
+<!-- <select id="dao에서 사용하는 메서드명" resultType="_num"> -->
+<!-- select count(*) from goodsList -->
+<!-- </select> -->
+
+<!-- <insert id="dao에서 사용하는 메서드명"> -->
+<!-- insert into T/N values(#{param1},#{param2},#{param3}) -->
+<!-- </insert> -->
+
+<!-- Map 컬렉션 프레임워크로 매개변수를 전달하는 경우 -->
+<!-- <insert id="dao에서 사용하는 메서드명" parameterType="java.util.Map"> -->
+<!-- insert into T/N values(#{item1},#{item2},#{item3}) -->
+<!-- </insert> -->
+<!-- </mapper> -->

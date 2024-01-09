@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.ezen.infoRum.dao.ManagerDao">
+	<!-- 재성이 파트 -->
+	
+	<insert id="noticeWriteProc" parameterType="java.util.Map">
+		insert into
+		notice(title, content)
+		values (#{item1}, #{item2})
+	</insert>
+
+	<select id="mtdList" resultType="com.ezen.infoRum.dto.NoticeDto">
+		select * from notice order by num desc
+	</select>
+	
+	<select id="mtdDetail" resultType="com.ezen.infoRum.dto.NoticeDto">
+		select * from notice where num = (#{param1})
+	</select>
+
+	<select id="mtdNoticeDetail" resultType="com.ezen.infoRum.dto.NoticeDto">
+			select * from notice where num = #{param1}
+	</select>
+	
+	<delete id="mtdNoticeDelete" parameterType="int">
+			 DELETE FROM notice WHERE num = #{param1}
+	</delete>
+	
+	<!-- 재광이 파트 -->
+	
+	<select id="mtdListInquiry" resultType="com.ezen.infoRum.dto.InquiryDto">
+			select * from inquiry order by num desc limit #{param1},5  
+	</select>
+	<select id="mtdInquiry" resultType="com.ezen.infoRum.dto.InquiryDto">
+			select * from inquiry where num = #{param1}
+	</select>
+	<select id="mtdInquiryComment" resultType="com.ezen.infoRum.dto.InquiryCmtDto">
+			select * from inquiry_comment where pos = #{param1} order by num asc; 
+	</select>
+	<select id="getInquiryCount" resultType="int">
+			select count(*) from inquiry 
+	</select>
+	<select id="getInquiryMax" resultType="int">
+			select max(num) from inquiry 
+	</select>
+	<insert id="inquiryWriteProc" parameterType="java.util.Map">
+		insert into
+		inquiry(uid,nickname,title,content,profile)
+		values (#{item1},#{item2}, #{item3},#{item4}, #{item5})
+	</insert>
+	<update id="inquiryUpdateReadCnt">
+		UPDATE inquiry SET readCnt = readCnt+1  where num = #{param1}
+	</update>
+
+</mapper>
